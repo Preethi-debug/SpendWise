@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { handleError } from '../utils';
 
 function ExpenseTrackerForm({ addExpense }) {
@@ -8,6 +8,9 @@ function ExpenseTrackerForm({ addExpense }) {
         amount: '',
         type: 'expense'
     });
+
+    // useRef: Reference to the description input
+    const descriptionRef = useRef(null);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -42,6 +45,9 @@ function ExpenseTrackerForm({ addExpense }) {
             amount: '',
             type: 'expense'
         });
+
+        // Focus the description field after submission
+        descriptionRef.current?.focus();
     };
 
     return (
@@ -58,6 +64,7 @@ function ExpenseTrackerForm({ addExpense }) {
                 <div>
                     <label>Description</label>
                     <input
+                        ref={descriptionRef}
                         onChange={handleChange}
                         type="text"
                         name="text"
