@@ -1,0 +1,569 @@
+
+/* ===== TRANSACTION FORM ===== */
+
+.transaction-form {
+    max-width: 100%;
+    margin: 25px 0;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid #eeeaf6;
+    box-shadow: 0 4px 18px rgba(70, 50, 120, 0.04);
+}
+
+.form-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.form-heading h1 {
+    font-size: 21px;
+    color: #33245c;
+    margin-bottom: 7px;
+}
+
+.form-heading p {
+    font-size: 13px;
+    color: #9993aa;
+}
+
+.form-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #f0ebff;
+    color: #7353c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.transaction-form form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.transaction-form form div {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.transaction-form label {
+    font-size: 13px;
+    color: #49445d;
+    font-weight: 600;
+}
+
+.transaction-form input,
+.transaction-form select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #e5e0ef;
+    border-radius: 8px;
+    background: #faf9ff;
+    color: #39334d;
+    font-size: 14px;
+    outline: none;
+}
+
+.transaction-form input:focus,
+.transaction-form select:focus {
+    border-color: #8060d9;
+}
+
+.add-transaction-btn {
+    grid-column: 1 / -1;
+    padding: 14px;
+    font-size: 14px;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .transaction-form form {
+        grid-template-columns: 1fr;
+    }
+
+    .transaction-form {
+        padding: 20px;
+    }
+}
+
+/* ===== TRANSACTION HISTORY ===== */
+
+.expense-list {
+    background: #ffffff;
+    border: 1px solid #eeeaf6;
+    border-radius: 16px;
+    padding: 25px;
+    margin-top: 25px;
+    box-shadow: 0 4px 18px rgba(70, 50, 120, 0.04);
+}
+
+.transaction-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.transaction-heading h2 {
+    font-size: 21px;
+    color: #33245c;
+    margin-bottom: 6px;
+}
+
+.transaction-heading p {
+    font-size: 13px;
+    color: #9993aa;
+}
+
+.transaction-count {
+    background: #f0ebff;
+    color: #7353c7;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.transaction-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.expense-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 5px;
+    border-bottom: 1px solid #f0edf5;
+}
+
+.expense-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-icon {
+    min-width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.expense-icon {
+    background: #fff0f0;
+    color: #e05252;
+}
+
+.income-icon {
+    background: #e9f8f1;
+    color: #15966a;
+}
+
+.transaction-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.expense-description {
+    font-size: 14px;
+    font-weight: 600;
+    color: #39334d;
+    overflow-wrap: anywhere;
+}
+
+.transaction-type {
+    display: inline-block;
+    font-size: 11px;
+    margin-top: 5px;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.expense-type {
+    background: #fff0f0;
+    color: #d94c4c;
+}
+
+.income-type {
+    background: #e9f8f1;
+    color: #15966a;
+}
+
+.transaction-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.transaction-value {
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.negative-value {
+    color: #e05252;
+}
+
+.positive-value {
+    color: #15966a;
+}
+
+.delete-button {
+    background: #fff0f0;
+    color: #e05252;
+    border: none;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 7px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0;
+}
+
+.delete-button:hover {
+    background: #e05252;
+    color: white;
+}
+
+.empty-transactions {
+    text-align: center;
+    padding: 45px 15px;
+}
+
+.empty-icon {
+    width: 50px;
+    height: 50px;
+    background: #f0ebff;
+    color: #7353c7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 23px;
+}
+
+.empty-transactions h3 {
+    color: #39334d;
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.empty-transactions p {
+    color: #9993aa;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .expense-list {
+        padding: 17px;
+    }
+
+    .transaction-heading h2 {
+        font-size: 18px;
+    }
+
+    .expense-item {
+        gap: 9px;
+    }
+
+    .transaction-right {
+        gap: 7px;
+    }
+
+    .transaction-value {
+        font-size: 12px;
+    }
+}
+
+/* ===== LOGIN PAGE ===== */
+
+.login-page {
+    width: 100%;
+    max-width: 1150px;
+    min-height: 650px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(70, 50, 120, 0.09);
+}
+
+/* LEFT WELCOME SECTION */
+
+.login-welcome {
+    position: relative;
+    overflow: hidden;
+    padding: 40px;
+    background: linear-gradient(145deg, #6846bd, #9478df);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.welcome-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.brand-symbol {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: rgba(255,255,255,0.2);
+    font-size: 22px;
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-tag {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.welcome-content h1 {
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+    margin: 22px 0;
+}
+
+.welcome-content > p {
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 350px;
+    opacity: 0.85;
+}
+
+.welcome-footer {
+    font-size: 13px;
+    opacity: 0.8;
+    position: relative;
+    z-index: 2;
+}
+
+/* DECORATION */
+
+.welcome-decoration {
+    height: 100px;
+    position: relative;
+    margin-top: 25px;
+}
+
+.decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.circle-one {
+    width: 100px;
+    height: 100px;
+    left: 10px;
+}
+
+.circle-two {
+    width: 75px;
+    height: 75px;
+    left: 23px;
+    top: 13px;
+}
+
+.circle-three {
+    width: 50px;
+    height: 50px;
+    left: 35px;
+    top: 25px;
+}
+
+.welcome-decoration span {
+    position: absolute;
+    left: 53px;
+    top: 37px;
+    font-size: 22px;
+}
+
+/* RIGHT LOGIN SECTION */
+
+.login-form-section {
+    padding: 55px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 390px;
+    margin: auto;
+}
+
+.login-heading {
+    margin-bottom: 35px;
+}
+
+.login-icon {
+    width: 48px;
+    height: 48px;
+    background: #f0ebff;
+    color: #7353c7;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    margin-bottom: 22px;
+}
+
+.login-heading h2 {
+    font-size: 27px;
+    color: #33245c;
+    margin-bottom: 9px;
+}
+
+.login-heading p {
+    font-size: 13px;
+    color: #9993aa;
+    line-height: 1.6;
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+
+.login-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.login-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #49445d;
+}
+
+.login-field input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e5e0ef;
+    border-radius: 9px;
+    background: #faf9ff;
+    outline: none;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.login-field input:focus {
+    border-color: #8060d9;
+    box-shadow: 0 0 0 3px rgba(128, 96, 217, 0.1);
+}
+
+.login-submit {
+    width: 100%;
+    padding: 14px;
+    margin: 5px 0 0;
+    background: #7353c7;
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+.login-submit:hover {
+    background: #5d3eae;
+}
+
+.signup-prompt {
+    text-align: center;
+    font-size: 13px;
+    color: #858094;
+}
+
+.signup-prompt a {
+    color: #7353c7;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.signup-prompt a:hover {
+    text-decoration: underline;
+}
+
+.login-bottom-text {
+    text-align: center;
+    color: #aaa5b8;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 750px) {
+    .login-page {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        min-height: auto;
+    }
+
+    .login-welcome {
+        min-height: 300px;
+        padding: 28px;
+    }
+
+    .welcome-content h1 {
+        font-size: 30px;
+    }
+
+    .welcome-decoration {
+        display: none;
+    }
+
+    .login-form-section {
+        padding: 40px 28px;
+    }
+}
+
+@media (max-width: 450px) {
+    .login-page {
+        margin: 0 auto;
+        border-radius: 15px;
+    }
+
+    .login-welcome {
+        min-height: 260px;
+    }
+
+    .login-heading h2 {
+        font-size: 24px;
+    }
+}

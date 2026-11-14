@@ -1,0 +1,310 @@
+
+/* ===== GLOBAL STYLES ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body,
+#root {
+    min-height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: #f5f3ff;
+    color: #25213b;
+}
+
+/* ===== ROOT ===== */
+#root {
+    width: 100%;
+    min-height: 100vh;
+    padding: 35px 6%;
+}
+
+/* ===== LOGIN / SIGNUP CONTAINER ===== */
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 380px;
+    margin: 70px auto;
+    box-shadow: 0 8px 30px rgba(70, 50, 120, 0.08);
+}
+
+.container h1 {
+    font-size: 26px;
+    margin-bottom: 22px;
+    color: #33245c;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.container div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #49445d;
+}
+
+.container input {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
+    border: 1px solid #e2def0;
+    border-radius: 8px;
+    outline: none;
+    background: #faf9ff;
+    transition: 0.2s;
+}
+
+.container input:focus {
+    border-color: #8060d9;
+    box-shadow: 0 0 0 3px rgba(128, 96, 217, 0.1);
+}
+
+.container input::placeholder {
+    font-size: 12px;
+    font-style: normal;
+    color: #aaa5b8;
+}
+
+/* ===== BUTTONS ===== */
+button {
+    background: #7353c7;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    border-radius: 8px;
+    padding: 11px 18px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: #5d3eae;
+    transform: translateY(-1px);
+}
+
+/* ===== USER HEADER ===== */
+.user-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 35px;
+    padding: 10px 0;
+    gap: 15px;
+}
+
+.user-section h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: #33245c;
+}
+
+.user-section button {
+    background: #7353c7;
+    padding: 11px 22px;
+    font-size: 14px;
+}
+
+/* ===== EXPENSE LIST ===== */
+.expense-list {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    margin-top: 25px;
+    background: #ffffff;
+    border: 1px solid #ebe7f5;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 4px 18px rgba(70, 50, 120, 0.04);
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 5px;
+    border-bottom: 1px solid #f0edf5;
+}
+
+.expense-item:last-child {
+    border-bottom: none;
+}
+
+.expense-description {
+    font-size: 15px;
+    font-weight: 600;
+    color: #39334d;
+}
+
+.delete-button {
+    background: #fff0f0;
+    color: #e05252;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background: #ffe0e0;
+    color: #c52f2f;
+}
+
+/* ===== INCOME & EXPENSE TOTALS ===== */
+.amounts-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 25px 0;
+    align-items: center;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-size: 15px;
+    flex-wrap: wrap;
+}
+
+.income-amount {
+    color: #15966a;
+    font-weight: 700;
+}
+
+.expense-amount {
+    color: #e05252;
+    font-weight: 700;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 600px) {
+    #root {
+        padding: 20px 5%;
+    }
+
+    .user-section {
+        align-items: flex-start;
+    }
+
+    .user-section h1 {
+        font-size: 23px;
+    }
+
+    .user-section button {
+        padding: 9px 13px;
+    }
+
+    .expense-list {
+        padding: 15px;
+    }
+
+    .amounts-container {
+        gap: 12px;
+    }
+}
+
+/* ===== FINANCE OVERVIEW ===== */
+
+.finance-overview {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.balance-card {
+    background: linear-gradient(120deg, #7152c7, #9478df);
+    color: white;
+    padding: 30px;
+    border-radius: 18px;
+    margin-bottom: 22px;
+    box-shadow: 0 8px 25px rgba(113, 82, 199, 0.18);
+}
+
+.card-label {
+    font-size: 15px;
+    opacity: 0.85;
+    margin-bottom: 12px;
+}
+
+.balance-card h2 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.balance-caption {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.amounts-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 0;
+}
+
+.summary-card {
+    background: white;
+    padding: 23px;
+    border-radius: 15px;
+    border: 1px solid #eeeaf6;
+    box-shadow: 0 4px 15px rgba(70, 50, 120, 0.04);
+}
+
+.summary-card p {
+    color: #858094;
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+.summary-card h2 {
+    font-size: 23px;
+}
+
+.income-card h2 {
+    color: #15966a;
+}
+
+.expense-card h2 {
+    color: #e05252;
+}
+
+.summary-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #f0ebff;
+    color: #7353c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+}
+
+@media (max-width: 600px) {
+    .amounts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .balance-card h2 {
+        font-size: 28px;
+    }
+}
